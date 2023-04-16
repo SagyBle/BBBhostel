@@ -1,0 +1,37 @@
+.days-buttons-div{
+  background-color: gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: fit-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 20px;
+  margin: auto;
+  margin-top: 20px;
+  
+
+}
+
+.day-button{
+  background-color: transparent ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0px 5px;
+  height: 30px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s;
+}
+
+.day-button-pressed{
+  background-color: rgb(206, 206, 206);
+  color: black;
+  transition: 0.4s;
+
+}

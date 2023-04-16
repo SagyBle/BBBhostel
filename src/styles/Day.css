@@ -1,0 +1,38 @@
+.salon-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  
+  width: 100%;  
+}
+
+.chairs-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.mb{  
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 3vh; 
+}
+
+.livingroom-header{
+    
+  text-align: end ;
+  padding-right: 10%;
+color: white;
+margin: 0;
+}
+
+.date-header{
+  color: white;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0px;
+  margin: 20px;
+}

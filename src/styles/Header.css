@@ -1,0 +1,20 @@
+.profile-pic{
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.log-out-button{
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+}
+
+.icons-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 23px;
+  
+}

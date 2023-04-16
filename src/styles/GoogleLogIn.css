@@ -1,0 +1,34 @@
+.google-login-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 32px;
+  direction: rtl;
+  width: auto;
+}
+
+.log-in-button{
+  background-color: #5464FB;
+  height: 40px;
+  border-radius: 90px;
+  width:fit-content;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.log-in-button:hover{
+  
+}
+
+.log-in-button-text{
+  text-align: center;
+  color: #777E90;
+  font-size: 12px;
+  line-height: 20px;
+  width: 68%;
+}

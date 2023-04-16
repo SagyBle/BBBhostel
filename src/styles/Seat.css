@@ -1,0 +1,15 @@
+.char-icon{
+  width: 100px;
+  /* background-color: aqua; */
+}
+
+.white{
+  color: white;
+}
+
+.chair-with-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
