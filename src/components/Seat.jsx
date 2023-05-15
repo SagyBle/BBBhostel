@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { doc, onSnapshot, getDoc, updateDoc } from "firebase/firestore";
+import {
+  doc,
+  onSnapshot,
+  collection,
+  getDoc,
+  getDocs,
+  updateDoc,
+} from "firebase/firestore";
 import { auth, db } from "../../src/pages/firebase";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
   Chair,
@@ -58,6 +66,35 @@ function Seat({
     });
   };
 
+  const isUserValid = async () => {
+    // go over all the seats on relevent date, and look if user took it
+    const querySnapshot = await getDocs(collection(db, `dates/${date}/seats`));
+    // querySnapshot.forEach((doc) => {
+    //   console.log(doc.data().seatedByUID === user.uid);
+    //   if (doc.data().seatedByUID === user.uid) {
+    //     return false;
+    //   }
+    // });
+    console.log("is user validddddd:");
+    let bool = true;
+
+    querySnapshot.forEach((doc) =>
+      // console.log("bbb", doc.data());
+      // console.log("user.uid:", user.uid);
+      // console.log("doc.data().seatedByUID:", doc.data().seatedByUID);
+      {
+        if (doc.data().seatedByUID === user.uid) {
+          // console.log(false);
+          bool = false;
+        }
+      }
+    );
+    console.log("final:", bool);
+    return bool;
+
+    // return true;
+  };
+
   const isSeatAvailable = async () => {
     const docSnap = await getDoc(docRef);
 
@@ -75,10 +112,15 @@ function Seat({
       alert("You must log in to reserve a seat");
       return;
     }
+    const isValid = await isUserValid();
+    if (!isValid) {
+      alert("You can reserve only one seat");
+      return;
+    }
     console.log(`order seat ${seat.id} by ${user?.email}`);
     //check if seat is available
     const isAvailable = await isSeatAvailable();
-    if (isAvailable) {
+    if (isAvailable && isValid) {
       console.log("here");
       occupyChair();
     }

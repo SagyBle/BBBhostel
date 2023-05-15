@@ -1,0 +1,36 @@
+.about-container{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+.about-div{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-icon{
+  width: 100px;
+  height: auto;
+}
+
+.carla-icon{
+  width: 120px;
+  height: auto;
+}
+
+.about-image{
+  width: 230px;
+  height: auto;
+}
+
+.about-back-home{
+  /* position:absolute; */
+  width: 100%;
+  margin-top: 24px;
+  margin-left: 24px;
+}

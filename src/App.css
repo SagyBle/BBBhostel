@@ -43,3 +43,8 @@ button{
   background-color: transparent;
   border: none;
 }
+
+.scroll-disabled{
+  overflow: hidden;
+  
+}

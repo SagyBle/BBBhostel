@@ -1,0 +1,65 @@
+.bm-container-div{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  height: 85vh; 
+}
+
+
+.bm-menu{
+  background-color: rgba(92, 91, 95, 0.7821);
+  width: 53%;
+  height: 85vh;
+  z-index: 1;
+  position: fixed;
+  
+ 
+  
+}
+
+.bm-overlay{
+  flex: 1;
+  background-color: rgba(1, 1, 1, 0.629);
+  height: 85vh;
+  width: 100%;
+  position: fixed;
+  scroll-behavior: none;
+}
+
+.bm-elemnts-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 32px;
+  margin-top: 32px;
+  
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bm-elemnt{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+}
+
+.bm-elemnt-icon{
+  width: 30px;
+  height: auto;
+  transition: 0.3s;
+}
+
+.bm-elemnt-icon:hover{
+  width: 40px;
+  height: auto;
+}
+
+.bm-elemnt-text{
+  color: white;
+}

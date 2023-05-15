@@ -9,13 +9,11 @@ import Header from "../components/Header";
 import GoogleLogIn from "../components/GoogleLogIn";
 import Footer from "../components/Footer";
 
-function Home() {
+function Home({ showBM }) {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="container">
-      <Header />
-
+    <div className={`container ${showBM ? "scroll-disabled" : ""}`}>
       {user ? <Booking /> : <GoogleLogIn />}
 
       <Footer />
